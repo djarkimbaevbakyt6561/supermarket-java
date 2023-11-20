@@ -1,12 +1,19 @@
+import java.time.LocalDate;
+
 public class Client implements CardInterface {
     String firstName;
     String lastName;
     byte age;
     Card card = new Card();
     Basket basket = new Basket();
+
     @Override
     public String payWithCard(double money) {
-        return null;
+        if (money < card.balance) {
+            return "Оплачено успешно!";
+        } else {
+            return "Недостаточно средств!";
+        }
     }
 
     @Override

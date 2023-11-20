@@ -24,23 +24,4 @@ public class Basket implements BasketInterface {
         index = newIndex;
         products = newProducts;
     }
-    public void deleteProducts(long[] ids) {
-        Product[] newProducts = new Product[100];
-        int newIndex = 0;
-
-        for (Product product : products) {
-            boolean shouldDelete = false;
-            for (long id : ids) {
-                if (product != null && product.id == id) {
-                    shouldDelete = true;
-                    break;
-                }
-            }
-            if (!shouldDelete) {
-                newProducts[newIndex++] = product;
-            }
-        }
-        index = newIndex;
-        products = newProducts;
-    }
 }

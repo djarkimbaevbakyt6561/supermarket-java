@@ -5,7 +5,7 @@ import interfaces.WithDrawel;
 public class Card implements Deposit, TransactionalHistory, WithDrawel {
     String firstName;
     String lastName;
-    long cardNumber;
+    String cardNumber;
     int balance;
     String[] transactionHistory = new String[100];
     int index = 0;
@@ -14,7 +14,7 @@ public class Card implements Deposit, TransactionalHistory, WithDrawel {
     public Card() {
     }
 
-    public Card(String firstName, String lastName, long cardNumber, int balance, String password) {
+    public Card(String firstName, String lastName, String cardNumber, int balance, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.cardNumber = cardNumber;
